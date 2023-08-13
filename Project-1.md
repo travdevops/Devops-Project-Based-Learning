@@ -176,7 +176,7 @@ we'll create an index.html file and echo some writings into the file in the web 
 
 `sudo echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectlamp/index.html`
 
-Testing if our by checking the virtual host on the web browser with our Public IP address or Public DNS name
+Testing by checking the virtual host on the web browser with our Public IP address or Public DNS name
 
 http://<Public-IP-Address>:80
 
