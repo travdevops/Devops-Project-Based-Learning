@@ -272,8 +272,7 @@ Another basic Linux command on the list is grep or global regular expression p
 
 
 
-
-<img width="753" alt="df-h" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/b102c27f-fa78-4877-ad89-b1d4245e9888">
+<img width="498" alt="Screenshot 2023-08-16 at 5 45 35 PM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/8c4f8524-7e45-4dee-b0ac-b44cf8cb5ea3">
 
 
 
@@ -365,5 +364,6 @@ For instance, you want to create a new TAR archive named newarchive.tar in t
 
 
 <img width="753" alt="tar" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/901dfcb6-6a9f-4726-aefc-44a171060489">
+
 
 
