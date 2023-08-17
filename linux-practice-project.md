@@ -362,8 +362,310 @@ For instance, you want to create a new TAR archive named newarchive.tar in t
 `tar -cvf newarchive.tar /ubuntu/commandlinux`
 
 
-
 <img width="753" alt="tar" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/901dfcb6-6a9f-4726-aefc-44a171060489">
 
 
 
+
+# _chown_ command
+
+The `chown` command lets you change the ownership of a file, directory, or symbolic link to a specified username.
+
+synthax 
+
+`chown` [group] [filename]
+
+
+
+# _jobs_ command
+
+A `job` is a process that the shell starts. The jobs command will display all the running processes along with their statuses.
+
+
+# _kill_ command
+
+
+Use the `kill` command to terminate an unresponsive program manually. It will signal misbehaving applications and instruct them to close their processes.
+
+
+To `kill` a program, you must know its process identification number (PID). If you don't know the PID, run the following command:
+Copy Below Code
+
+`ps ux`
+
+
+<img width="760" alt="Screenshot 2023-08-16 at 11 52 05 PM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/6c16996d-9272-4926-9f1c-5f059d547911">
+
+
+After knowing what signal to use and the program's PID, enter the following syntax:
+
+`kill` [signal_ option] pid
+
+
+
+
+# _ping_ command
+
+The `ping` command is one of the most used basic Linux commands for checking whether a network or a server is reachable.
+
+syntax: 
+
+`ping` [option] [hostname or IP address]
+
+For example, you want to know whether you can connect to Google and measure its response time:
+
+`ping google.com`
+
+
+<img width="490" alt="Screenshot 2023-08-16 at 11 56 17 PM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/c100d3d1-175c-4618-876c-d12979556ae0">
+
+
+
+
+# _wget_ command
+
+`wget` Linux command line lets you download files from the internet using the `wget` command.
+
+
+The `wget` command retrieves files using HTTP, HTTPS, and FTP protocols. It can perform recursive downloads, which transfer website parts by following directory structures and links, creating local versions of the web pages.
+
+`wget` [option] [url]
+
+
+
+# _uname_ command
+
+The `uname` or unix name command will print detailed information about your Linux system and hardware.
+
+syntax:
+
+`uname` 
+
+`uname -a`
+
+
+<img width="492" alt="Screenshot 2023-08-17 at 12 01 11 AM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/83d7076d-154a-44f5-83f6-2f042db9803e">
+
+
+# _top_ command
+
+
+The `top` command in Linux Terminal will display all the running processes and a dynamic real-time view of the current system.
+
+The `top` command can also help you identify and terminate a process that may use too many system resources.
+
+`top`
+
+
+<img width="962" alt="Screenshot 2023-08-17 at 12 03 52 AM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/bbcf78db-db1a-4f86-a68c-d19f21293e29">
+
+
+
+# _history_ command:
+
+With history, the system will list up to 500 previously executed commands, allowing you to reuse them without re-entering.
+
+Only users with sudo privileges can run this command.
+
+`sudo history`
+
+
+
+# _man_ command
+
+
+The `man` command provides a user manual of any commands or utilities you can run in Terminal, including the name, description, and options.
+
+
+For example, you want to access the manual for the ls command:
+
+`man ls`
+
+
+
+
+# _echo_ command
+
+The `echo` command is a built-in utility that displays a line of text or string using the standard output.
+
+syntax:
+
+`echo` string
+
+
+# _zip_, _unzip_ commands
+
+Use the `zip` command to compress your files into a ZIP file, a universal format commonly used on Linux.
+
+The `zip` command is also useful for archiving files and directories and reducing disk usage.
+
+For example, you have a file named scotty.txt that you want to compress into archive.zip in the current directory:
+
+
+`zip archive.zip scotty.txt`
+
+<img width="366" alt="Screenshot 2023-08-17 at 12 22 45 AM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/28c82373-9c7f-45eb-9c18-a45d086f747d">
+
+
+So, to `unzip` the file called archive.zip in the current directory, enter:
+
+`unzip archive.zip scotty.txt`
+
+
+<img width="547" alt="Screenshot 2023-08-17 at 12 25 00 AM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/e18a1b35-cc54-448a-9f8e-a319d892c487">
+
+
+
+
+
+# _hostname_ command
+
+Run the `hostname` command to know the system's hostname. You can execute it with or without an option.
+
+`hostname`
+
+`hostname -i` - displays the machine's IP address.
+
+`hostname -a` - -a or -alias displays the hostname's alias.
+
+
+
+# _useradd_ command
+
+`useradd` is used to create a new account, while the **passwd** command allows you to add a password. Only those with root privileges or sudo can run the useradd command.
+
+When you use the `useradd` command, it performs some major changes:
+
+- Edits the /etc/passwd, /etc/shadow, /etc/group, and /etc/gshadow files for the newly created accounts.
+
+- Creates and populates a home directory for the user.
+
+- Sets file permissions and ownerships to the home directory.
+
+-   Here's the basic syntax:
+
+`useradd` [option] username
+
+set password
+
+`passwd` [password combination] 
+
+
+
+
+# _userdel_ command
+
+To delete a user account, use the `userdel` command:
+
+`userdel` username
+
+
+
+
+
+# _apt-get_ command
+
+
+`apt-get` is a command line tool for handling  ***Advanced Package Tool*** (APT) libraries in Linux. 
+
+It lets you retrieve information and bundles from authenticated sources to manage, update, remove, and install software and its dependencies.
+
+
+Running the ***apt-get*** command requires you to use sudo or root privileges.
+
+for example
+
+
+`sudo apt get`
+
+`apt get install mlocate` - to install the locate command package files
+
+
+
+# _nano_, _vi_, _jed_ commands
+
+these are text editors used to edit and manage files, `nano` and `vi` come with the operating system, while `jed` has to be installed.
+
+
+The `nano` command denotes keywords and can work with most languages.
+
+`nano` filename
+
+
+`vi` uses two operating modes to work - insert and command. 
+
+insert is used to edit and create a text file.
+
+On the other hand, the command performs operations, such as saving, opening, copying, and pasting a file.
+
+`vi` or `vim` filename 
+
+
+`jed` has a drop-down menu interface that allows users to perform actions without entering keyboard combinations or commands.
+
+
+
+
+# _alias_, _unalias_ commands
+
+
+
+`alias` allows you to create a shortcut with the same functionality as a command, file name, or text. When executed, 
+
+it instructs the shell to replace one string with another.
+
+
+`alias` Name=string
+
+for example - `alias where=pwd`
+
+
+<img width="326" alt="Screenshot 2023-08-17 at 1 06 20 AM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/0f8b16f5-e218-4cc8-803c-6654e56e8a55">
+
+
+On the other hand, the `unalias` command deletes an existing alias.
+
+`unalias where`
+
+
+<img width="380" alt="Screenshot 2023-08-17 at 1 07 01 AM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/bc556c47-914e-465e-8cc3-c1d0aa1c1cc2">
+
+
+# _su_ command
+    
+The switch user or `su` command allows you to run a program as a different user. 
+
+It changes the administrative account in the current log-in
+session.
+
+When executed without any option or argument, the su command runs through root privileges. It will prompt you to authenticate and use the
+sudo privileges temporarily.
+
+`-p` or -preserve-environment keeps the same shell environment, consisting HOME, SHELL, USER, and LOGNAME. 
+
+`-s` or -shell lets you specify a different shell environment to run.
+
+`-|` or -login runs a login script to switch to a different username. Executing it requires you to enter the user's password.
+
+
+
+
+# _htop_ command
+
+The `htop` command is an interactive program that monitors system resources and server processes in real time.
+
+`htop` [options]
+
+
+
+
+# _ps_ command
+
+The process status or `ps` command produces a snapshot of all running processes in your system.
+
+
+`-T` displays all processes associated with the current shell session.
+
+`-u` username lists processes associated with a specific user. 
+
+`-A` or `-e` shows all the running processes
