@@ -108,5 +108,57 @@ Git branches can be deleted with this command
 `git branch -d <branch-name>`
 
 
+# COLLABORATION & REMOTE REPOSITORIES!
+
+Collaboration on git is all about how different developers from different locations access the same source code
+How this happens is through _github_
+
+## Github is a web based platform where git repositories are hosted
+
+By hosting our local git repository on github, it becomes available in the public internet for remote teams to view, update and make certain changes and new features of their own. 
+
+After creating a github account and creating a new local repository. 
+
+Lets send a copy of the git local repo to github with this command
+
+`git remote add origin <link to the github repo>`
+
+
+<img width="649" alt="Screenshot 2023-08-22 at 6 52 02 PM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/f380644c-b13e-46d7-8b05-e368a9eb2b8a">
+
+
+
+
+
+
+
+
+
+
+we will push the local github repo to the remote github repo
+
+using the command `git push origin <branch-name>`
+
+in this case, the branch is _master_
+
+<img width="480" alt="Screenshot 2023-08-22 at 7 33 39 PM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/86bef867-5529-4781-843d-79449a07b1fd">
+
+
+
+
+
+
+# CLONING REMOTE GIT REPOSITORY
+
+For our other developers and working team members to be able to get the repository to their local machine, the have to `clone` the repo to their local machines. The same equivalence as making a copy of the repo for themselsves to work on. 
+
+using the command
+
+`git clone <link to the remote repository>`
+
+
+<img width="594" alt="Screenshot 2023-08-22 at 7 42 52 PM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/cf4b8a18-8992-455a-81b4-83acc87d8f44">
+
+
 
 
