@@ -41,7 +41,7 @@
 
 * Before any traffic can on the web server we just installed, we need to open TCP Port 80 (default port) that web browsers use to access the webpages online.
 
-*  On the security settings of the ec2 Instance on AWS, We will edit inbound rules and add a new rule for the HTTP to listen to the default port 80 and to be accessible through the IP Address.
+*  On the security settings of the ec2 Instance on AWS, We will edit the inbound rules and add a new rule for the HTTP to listen to the default port 80 and to be accessible through the IP Address.
 
 <img width="1316" alt="Screenshot 2023-08-25 at 7 43 03 PM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/24c99bac-cd17-4e2a-b9c8-80d434a3782f">
 
@@ -57,6 +57,46 @@
 * The webpage shows this result confirmed our NGINX server's Installation. 
 
 <img width="836" alt="Screenshot 2023-08-25 at 7 51 34 PM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/1eecf5df-742c-4a87-93e2-f2c684202d4a">
+
+
+# Install MYSQL!
+
+* MYSQL is the Database Management System of choice in this project, It is able to store and manage data for your site in a relational database
+* We'll use the command below to install the software unto the server
+* `sudo apt install mysql-server` and follow the prompts with '_Y_' to proceed with the installation.
+
+  <img width="1227" alt="Screenshot 2023-08-30 at 7 11 31 PM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/99498781-38f5-4a58-be1e-055994f04044">
+
+* After Installation COmpletion, Log into the MYSQL console:
+* `sudo mysql`
+  <img width="677" alt="Screenshot 2023-08-30 at 7 14 44 PM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/84a3e360-e4e1-47db-b2f6-96728bef5e81">
+
+* To secure your MySQL database, run the pre-installed security script. Set the root user's password as "PassWord.1".
+* `ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PassWord.1';`
+  <img width="771" alt="Screenshot 2023-08-30 at 7 15 37 PM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/71e89295-3e6a-4559-ae82-122a803abeb6">
+
+* Exit the MySQL shell with: mysql> `exit`
+  <img width="325" alt="Screenshot 2023-08-30 at 7 16 02 PM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/3e59dee3-5e51-402c-9e14-3292c7bf291f">
+
+* Log back into the MYSQL script by running `sudo mysql_secure_installation`
+* The script will prompt us to configure the VALIDATE PASSWORD PLUGIN.
+* Then we'll input our updated password 'PassWord.1'
+* It's our decision whether to turn on password validation. If we'll choose to, MySQL will reject weak passwords.
+* Answer _Y_ for _yes_, or anything else to continue without enabling.
+* If we say "_yes_" to password validation, we can pick a level. Level 2 is the strongest, but it might give errors for weak passwords which doesn’t contain numbers, upper and lowercase letters, special characters.
+* The server will next ask us to select and confirm a password for the MySQL root user, After enabling password validation, we'll see the password strength and be asked to confirm it. Enter "_Y_".
+  <img width="893" alt="Screenshot 2023-08-30 at 7 20 25 PM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/32a42744-f0d4-48df-9793-d3b6b87d0f45">
+
+* For the rest of the questions, press '_Y_' and hit the ENTER key at each prompt
+<img width="706" alt="Screenshot 2023-08-30 at 7 21 08 PM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/eec57763-bec3-45d1-8785-7ec627fc5e32">
+
+* Once finished, Test the MYSQL console by logging in with:
+* `sudo mysql -p` Make sure to include the "_-p_" flag in the command to prompt for the new root user password.
+  <img width="750" alt="Screenshot 2023-08-30 at 7 22 36 PM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/e78f35f7-352d-4932-a741-475b556a320f">
+
+* MySQL server is now installed and secured. 
+
+
 
 
 
