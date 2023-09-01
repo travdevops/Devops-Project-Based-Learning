@@ -172,7 +172,10 @@
 * `sudo mysql`
 * create a new database from the MYSQL console
 -     `CREATE DATABASE `example_database`;
-* 
+
+  
+
+
 
 
 
