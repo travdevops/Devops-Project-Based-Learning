@@ -173,8 +173,24 @@
 * create a new database from the MYSQL console
 -     `CREATE DATABASE `example_database`;
 
-  
+* Create a new user named _example_user_ in MySQL, using the following command:
+* `CREATE USER 'example_user'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';`
+* Remember to replace 'password' with a secure password of your own choosing.
+* In our case, We created the password 'PassWord.1' earlier
+* This command sets up the user with the mysql_native_password authentication method
 
+* Give permission to the user over the _example_database_ database.
+* `GRANT ALL ON example_database.* TO 'example_user'@'%';`
+* This will give the _example_user_ user full privileges over the example_database database, while preventing this user from creating or modifying other databases on your server.
+* Exit MySQL
+* We can now log back into MySQL with our proper permission credentials with this command
+* `mysql -u example_user -p` -p flag to prompt for password for the database user
+* After logging in to the MySQL console, confirm that you have access to the _example_database_ database
+* `SHOW DATABASES;`
+* THE FOLLOWING INPUT WILL DISPLAY!
+* Then, create a table named todo_list with this statement:
+* `CREATE TABLE example_database.todo_list (item_id INT AUTO_INCREMENT,content VARCHAR(255),PRIMARY KEY(item_id));`
+* 
 
 
 
