@@ -106,6 +106,9 @@
 * Additionally, installing _php-mysql_ allows PHP to communicate with MySQL databases. The core PHP packages will be installed automatically as dependencies.
 * We will install both packages at once with this command `sudo apt install php-fpm php-mysql`
 * Enter '_Y_' to proceed.
+  
+  <img width="980" alt="Screenshot 2023-08-30 at 7 23 34 PM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/5c3cd585-fdfe-4469-990f-6607bea2031e">
+
 * PHP compnents are installed!
 
 
@@ -129,6 +132,10 @@
 * `sudo nginx -t`
 * You shall see following message:
 * _nginx: the configuration file /etc/nginx/nginx.conf syntax is ok. nginx: configuration file /etc/nginx/nginx.conf test is successful_
+  
+<img width="869" alt="Screenshot 2023-08-30 at 7 28 23 PM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/84198378-b673-4b5c-bc6e-a075044e1369">
+
+  
 * If any errors are reported, go back to your configuration file to review its contents before continuing.
 * We also need to disable default Nginx host that is currently configured to listen on port 80, for this run:
 * `sudo unlink /etc/nginx/sites-enabled/default`
@@ -140,5 +147,6 @@
 * `sudo echo 'Hello LEMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectLEMP/index.html`
 * On the browser, paste the public address to port 80 to test what we echoed into the web root directory.
 * This is the result.
-* 
+  <img width="979" alt="Screenshot 2023-08-30 at 7 30 57 PM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/e6b732dc-0a87-4ee3-b9ea-4dc5deaa30cb">
+
 
