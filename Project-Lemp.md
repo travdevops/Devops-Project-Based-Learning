@@ -181,18 +181,45 @@
 
 * Give permission to the user over the _example_database_ database.
 * `GRANT ALL ON example_database.* TO 'example_user'@'%';`
+  
 * This will give the _example_user_ user full privileges over the example_database database, while preventing this user from creating or modifying other databases on your server.
 * Exit MySQL
+  <img width="915" alt="Screenshot 2023-08-30 at 8 31 23 PM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/d5d95c61-d6e2-4219-8c16-2c679dff8075">
+
 * We can now log back into MySQL with our proper permission credentials with this command
 * `mysql -u example_user -p` -p flag to prompt for password for the database user
+  <img width="816" alt="Screenshot 2023-08-30 at 8 30 44 PM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/fa94e5cc-5244-40c3-a55f-6c5f108ffa0b">
+
 * After logging in to the MySQL console, confirm that you have access to the _example_database_ database
 * `SHOW DATABASES;`
 * THE FOLLOWING INPUT WILL DISPLAY!
-* Then, create a table named todo_list with this statement:
+  <img width="371" alt="Screenshot 2023-08-30 at 9 40 04 PM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/923dbd73-b2fc-4825-8d88-4c729dd8d314">
+
+* Then, create a table named _todo_list_ with this statement:
 * `CREATE TABLE example_database.todo_list (item_id INT AUTO_INCREMENT,content VARCHAR(255),PRIMARY KEY(item_id));`
-* 
+* Insert a few rows of content in the test table repeat the next command a few times, using different VALUES:
+* `INSERT INTO example_database.todo_list (content) VALUES ("My first important item");`
+* `INSERT INTO example_database.todo_list (content) VALUES ("My second important item");`
+* `INSERT INTO example_database.todo_list (content) VALUES ("My third important item");`
+* `INSERT INTO example_database.todo_list (content) VALUES ("Yes one final thing too");`
+  <img width="1220" alt="Screenshot 2023-08-30 at 8 35 41 PM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/aca857de-6ad8-4f0f-9219-d07377bb277c">
 
+* To confirm that the data was successfully saved to your table, run:
+* `SELECT * FROM example_database.todo_list;`
+  <img width="682" alt="Screenshot 2023-08-30 at 9 46 46 PM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/a70f2172-1076-49fd-8706-ab69726331b1">
 
-
+* After verifying the legitimate data in our _todo_list_ file on the datatbase, exit the MYSQL Console
+* Now you can whip up a PHP script that connects to MySQL and retrieves your desired content.
+* Create a new PHP file in your custom web root directory using your preferred editor. We’ll use nano for that:
+* `nano /var/www/projectLEMP/todo_list.php`
+* Copy some PHP barebones into the file and close it.
+  <img width="953" alt="Screenshot 2023-08-30 at 8 37 07 PM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/634f0814-ab6c-43d6-94f9-4981e8667572">
+  
+* This PHP script will connect to our MySQL database, query the todo_list table, and display the results in a neat list format. 
+* Remember our MYSQL native password that was changed to "PassWord.1", The same change will be made into the todo_list.php file.
+* You can now access this page in your web browser by visiting the domain name or public IP address configured for your website, followed by _/todo_list.php:_
+A Page my this should come up. 
+<img width="411" alt="Screenshot 2023-08-30 at 9 51 48 PM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/0d41ce0e-4b6e-4a7b-a285-47cd9551cc77">
+* Our PHP environment is now ready to connect and interact with your MySQL server.
 
 
