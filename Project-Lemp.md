@@ -149,4 +149,31 @@
 * This is the result.
   <img width="979" alt="Screenshot 2023-08-30 at 7 30 57 PM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/e6b732dc-0a87-4ee3-b9ea-4dc5deaa30cb">
 
+# Testing PHP with NGINX.
+
+* At this point, Our LEMP stack is completely installed and fully operational.
+* Testing it to verify that NGINX responds to PHP files.
+* You can do this by creating a test PHP file in your document root, Open a new file called _info.php_ within your document root in your text editor: Using nano.
+* `sudo nano /var/www/projectLEMP/info.php`
+* paste the following lines into the new file and close the nano editor
+* access this page in your web browser by visiting the domain name or public IP address you’ve set up in your Nginx configuration file, followed by _/info.php_:
+* web page containing detailed information about your server should come up as shown below:
+* <img width="968" alt="Screenshot 2023-08-30 at 8 23 01 PM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/48b52e10-d600-452b-8495-84630d2a077e">
+
+
+
+# Retrieving data from MySQL database with PHP
+
+* In this step we will create a test database with simple “To do list” and configure access to it, so the Nginx website would be able to query data from the Database and display it.
+* We’ll need to create a new user with the mysql_native_password authentication method in order to be able to connect to the MySQL database from PHP.
+* We will create a database named _example_database_ and a user named _example_user_, but you can replace these names with different values.
+* We will stick to the names pre-used.
+* Log back into the MYSQL console
+* `sudo mysql`
+* create a new database from the MYSQL console
+-     `CREATE DATABASE `example_database`;
+* 
+
+
+
 
