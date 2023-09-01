@@ -62,12 +62,12 @@
 # Install MYSQL!
 
 * MYSQL is the Database Management System of choice in this project, It is able to store and manage data for your site in a relational database
-* We'll use the command below to install the software unto the server
+* We'll use this command below to install the software unto the server
 * `sudo apt install mysql-server` and follow the prompts with '_Y_' to proceed with the installation.
 
   <img width="1227" alt="Screenshot 2023-08-30 at 7 11 31 PM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/99498781-38f5-4a58-be1e-055994f04044">
 
-* After Installation COmpletion, Log into the MYSQL console:
+* After Installation Completion, Log into the MYSQL console:
 * `sudo mysql`
   <img width="677" alt="Screenshot 2023-08-30 at 7 14 44 PM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/84a3e360-e4e1-47db-b2f6-96728bef5e81">
 
