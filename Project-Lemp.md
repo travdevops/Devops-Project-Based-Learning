@@ -59,7 +59,7 @@
 <img width="836" alt="Screenshot 2023-08-25 at 7 51 34 PM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/1eecf5df-742c-4a87-93e2-f2c684202d4a">
 
 
-# Install MYSQL!
+# Installing MYSQL!
 
 * MYSQL is the Database Management System of choice in this project, It is able to store and manage data for your site in a relational database
 * We'll use this command below to install the software unto the server
@@ -99,5 +99,46 @@
 
 
 
+# Installing PHP
+* We have [Nginx](url) for serving content, MySQL for data management, and now we will install PHP for generating dynamic web content.
+* Nginx requires an external program to handle PHP processing and act as a bridge between the PHP interpreter itself and the web server
+* This helps To enhance performance in PHP-based websites, We will install _php-fpm_ (PHP fastCGI process manager) and configure Nginx to pass PHP requests to it.
+* Additionally, installing _php-mysql_ allows PHP to communicate with MySQL databases. The core PHP packages will be installed automatically as dependencies.
+* We will install both packages at once with this command `sudo apt install php-fpm php-mysql`
+* Enter '_Y_' to proceed.
+* PHP compnents are installed!
 
+
+
+
+# Configuring NGINX To Use PHP Processor
+
+* When hosting multiple sites on Nginx, you can create separate server blocks within the configuration file for each site. This allows you to define different document root directories and manage each site individually. It's a great way to keep things organized and ensure smooth management of multiple websites.
+* Create the root web directory for the domain
+* `sudo mkdir /var/www/projectLEMP`
+* Assign Ownership to $USER Environment
+* `sudo chown -R $USER:$USER /var/www/projectLEMP`
+* Then, open a new configuration file in Nginx’s sites-available directory using your preferred command-line editor. Here, we’ll use _nano_:
+
+*`sudo nano /etc/nginx/sites-available/projectLEMP`
+* This will create a new blank file. Paste in the following bare-bones (As seen in the photo below)
+* Close the nano editor.
+* Activate your configuration by linking to the config file from Nginx’s sites-enabled directory:
+* `sudo ln -s /etc/nginx/sites-available/projectLEMP /etc/nginx/sites-enabled/`
+* This will tell Nginx to use the configuration next time it is reloaded. You can test your configuration for syntax errors by typing:
+* `sudo nginx -t`
+* You shall see following message:
+* _nginx: the configuration file /etc/nginx/nginx.conf syntax is ok. nginx: configuration file /etc/nginx/nginx.conf test is successful_
+* If any errors are reported, go back to your configuration file to review its contents before continuing.
+* We also need to disable default Nginx host that is currently configured to listen on port 80, for this run:
+* `sudo unlink /etc/nginx/sites-enabled/default`
+* reload Nginx to apply the changes:
+* `sudo systemctl reload nginx`
+
+* Now, the website is active but the root directory is empty.
+* Create an index.html file in that location so that we can test that your new server block works as expected:
+* `sudo echo 'Hello LEMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectLEMP/index.html`
+* On the browser, paste the public address to port 80 to test what we echoed into the web root directory.
+* This is the result.
+* 
 
