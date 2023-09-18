@@ -21,16 +21,20 @@ commands based on conditions. Statements like *if-else* for loops, and and case 
 
 * Using if-else to execute scripts on different conditions. 
 * This code asks you to enter a number and then displays whether it's positive or negative.
-![Alt text](if-else.png)
+  <img width="612" alt="if-else" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/77332030-f7f1-4bff-b292-f725a6f0d856">
+
 * The result on the local machine is as follows.
-![Alt text](if-else2.png)
+
+<img width="387" alt="if-else2" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/f4abde1e-cbc6-4324-ba99-c9eb52126866">
 
 
 
 * Using as a loop to create a list
-![Alt text](scripts-loop1.png)
+  <img width="643" alt="scripts-loop1" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/55e0be32-0571-40ab-8312-86196eda9c3e">
+
 * The result on the local machine is as follows.
-![Alt text](script-loop2.png)
+<img width="360" alt="script-loop2" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/2555bdc5-d560-4abe-93c1-772373a6cc52">
+
 
 ## USER INPUT
 * **Input and Output**: Bash provides various ways to handle input and output. 
@@ -54,8 +58,15 @@ some operators.
 modularize your code and make it more reusable.
 * You can define functions using the function keyword or simply by declaring the function name followed by parentheses.
 
-![Alt text](<Screenshot 2023-09-18 at 8.36.34 PM.png>)
+* 
+<img width="608" alt="Screenshot 2023-09-18 at 8 36 34 PM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/207a1eb8-f455-41af-8230-83fa0afebe52">
+
+
 * The Result is as Follows:
-![Alt text](<Screenshot 2023-09-18 at 8.36.06 PM.png>)
+
+
+
+  <img width="363" alt="Screenshot 2023-09-18 at 8 36 06 PM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/26b67de6-ab4e-49a2-bc0e-3baf97044dbd">
+
 
 
