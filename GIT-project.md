@@ -1,4 +1,4 @@
-# WELCOME TO MY GIT-PROJECT!
+# Welcome To My GIT-PROJECT!
 
 ### - Git is basically the ultimate distributed version control system.
 
@@ -6,7 +6,7 @@
  
  ### - Git solves the basic issues with source code sharing. 
 
-# INITIALZING A NEW REPOSITORY!
+# Initializing a New GIT Repository!
 
  We must have installed Git properly on the terminal.
 
