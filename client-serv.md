@@ -12,4 +12,4 @@
 
 Firstly, We have to update the apt packages with `sudo apt update`, then
 
-  * Install  MySQL Server software on `mysql server`
+  * Install  MySQL Server software on _mysql server_
