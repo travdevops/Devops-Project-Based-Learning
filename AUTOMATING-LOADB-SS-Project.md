@@ -22,7 +22,8 @@
 - This is the script in the file.
 
 apache1-config.sh
-<img width="1153" alt="nano content apa1" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/4847d1e6-f6d6-4d01-a8a7-876126e324cc">
+
+<img width="994" alt="nano content apa1" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/9422defb-04fd-46c3-ad65-28ea6302adc1">
 
 
 
