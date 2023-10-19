@@ -7,12 +7,15 @@ On the example of AWS services understand the difference between Block Storage, 
 
 ## Setup and technologies used
 As a member of a DevOps team, you will implement a tooling website solution which makes access to DevOps tools within the corporate infrastructure easily accessible.
+
 In this project you will implement a solution that consists of following components:
 1.	Infrastructure: AWS
-2.	Webserver Linux: Three Red Hat Enterprise Linux 8
-3.	Database Server: One Ubuntu 20.04 + MySQL
-4.	Storage Server: One Red Hat Enterprise Linux 8 + NFS Server
+2.	Webserver Linux: One Red Hat Enterprise Linux 9
+3.	Database Server: One Ubuntu 22.04 + MySQL
+4.	Storage Server: One Red Hat Enterprise Linux 9 + NFS Server
 5.	Programming Language: PHP
 6.	Code Repository: GitHub
-On the diagram below you can see a common pattern where several stateless Web Servers share a common database and also access the same files using Network File Sytem (NFS) as a shared file storage. Even though the NFS server might be located on a completely separate hardware – for Web Servers it look like a local file system from where they can serve the same files
 
+- To determine the suitable storage solution, we need to consider what data will be stored, its format, how it will be accessed, by whom, from where, and how frequently. This will help us choose the right storage system for our solution.
+
+- 
