@@ -205,7 +205,7 @@ In order for NFS server to be accessible from your client servers (DB server and
 - Create a database and name it tooling > `create database tooling;`
 - Create a DB User named webaccess create user > `create user 'webaccess'@'172.31.0.0/20 identified by 'mypass';`
 - Grant permission to webaccess user on tooling database to do anything only from the webservers subnet cidr > `grant all on tooling.* to
-'webaccess'0'172.31.0.0/20';`
+'webaccess'@'172.31.0.0/20';`
 
 ![mysql-tooling](https://github.com/travdevops/darey.io-pbl/assets/137777644/01fb2e2f-046a-4a43-bb72-840060ad1e30)
 
@@ -244,8 +244,8 @@ During the next steps we will do following:
 5. Install Remi’s repository, Apache and PHP Dependencies.
 
        - sudo yum install httpd -y
-       - sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
-       - sudo dnf install dnf-utils http://rpms.remirepo.net/enterprise/remi-release-8.rpm
+       - sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
+       - sudo dnf install dnf-utils http://rpms.remirepo.net/enterprise/remi-release-9.rpm
        - sudo dnf module reset php
        - sudo dnf module enable php:remi-7.4
        - sudo dnf install php php-opcache php-gd php-curl php-mysqlnd
@@ -277,3 +277,46 @@ Repeat steps 1-5 for other Web Servers (clients).
        Clone respository URL > git clone <Repo-URL>
     
 ![git fork clone](https://github.com/travdevops/darey.io-pbl/assets/137777644/efcc8aa4-e88b-43de-987f-9ec75b38f004)
+
+
+9. Deploy the tooling website’s code to the Webserver >  Ensure that the html folder from the repository is deployed to /var/www/html.
+This bascially means you should copying the html file from the cloned repository to /var/www/html.
+- cd into the tooling directory - `cd tooling`
+- copy everything in the html code file to /var/www/html `sudo cp -R html/. /var/www/html`
+
+Note 1: Do not forget to open TCP port 80 on the Web Server.
+Note 2: If you encounter 403 Error – check permissions to your /var/www/html folder and also disable SELinux 
+- `sudo setenforce 0`
+- To make this change permanent – open following config file `sudo vi /etc/sysconfig/selinux` and set **SELINUX=disabled** then restart httpd.
+
+  ![selinux=disabled](https://github.com/travdevops/darey.io-pbl/assets/137777644/539e8a0d-8cd6-4a0f-b764-3e8029105972)
+
+- On the DB Server. Do some configurations to make sure of the connection.
+
+    - add the mysql aurora security group on the DB server. 
+    - head to the mysql config file </etc/mysql/mysql.conf.d/mysqld.cnf> and change the bind address to 0.0.0.0
+  
+![mysqlconf](https://github.com/travdevops/darey.io-pbl/assets/137777644/ea60278a-b721-4937-9f8f-ccbe67cc06c6)
+
+
+10. Back to the Web server - Update the website’s configuration to connect to the database (in /var/www/html/functions.php file).
+    - Apply tooling-db.sql script to your database using this command -
+    - `mysql -h <databse-private-ip> -u <db-username> -p <db-pasword> < tooling-db.sql`
+
+      ![toolingdb-sql](https://github.com/travdevops/darey.io-pbl/assets/137777644/964be537-fce7-4b85-a5f9-ff0a1575ddb8)
+
+    - On the mysql console, check for users database
+
+![mysql-dbserver](https://github.com/travdevops/darey.io-pbl/assets/137777644/71984356-7851-49ff-948a-27ba45b57636)
+
+
+11. Open the website in your browser http://<Web-Server-Public-IP-Address-or-Public-DNS-Name>/index.php and make sure you can login into the website with admin user.
+
+
+![loginpage](https://github.com/travdevops/darey.io-pbl/assets/137777644/016c05d7-a497-4cbb-b0b2-03bf982bc703)
+
+
+![end ](https://github.com/travdevops/darey.io-pbl/assets/137777644/d1fd072a-aead-4ea4-9004-cfd93d945038)
+
+
+THE END!
