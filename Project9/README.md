@@ -186,7 +186,7 @@ Save the file.
 `sudo exportfs -arv`
 
 
-Check the ports which port is used by NFS> `rpcinfo -p | grep nfs`
+Check the ports which port is used by NFS > `rpcinfo -p | grep nfs`
 
 ![rpcinfo](https://github.com/travdevops/darey.io-pbl/assets/137777644/b23e33e6-f472-4c80-a684-0bf20548d3c1)
 
@@ -195,7 +195,21 @@ Important note: In order for NFS server to be accessible from your client server
 <img width="1322" alt="securitygroup-subnet" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/7a16e9f4-0068-40d3-9aa8-6f49880b66a9">
 
 
-### STEP 2 – PREPARE DATABASE SERVER
+### STEP 2 – PREPARE & CONFIGURE DATABASE SERVER
+
+- Install MySQL server > `sudo yum install mysql-server -y`
+- Log into Mysql console > `sudo mysql`
+- Create a database and name it tooling > `create database tooling;`
+- Create a DB User named webaccess create user > `create user 'webaccess'@'172.31.0.0/20 identified by 'mypass';`
+- Grant permission to webaccess user on tooling database to do anything only from the webservers subnet cidr > `grant all on tooling.* to
+'webaccess'0'172.31.0.0/20';`
+
+![mysql-tooling](https://github.com/travdevops/darey.io-pbl/assets/137777644/01fb2e2f-046a-4a43-bb72-840060ad1e30)
+
+![mysql](https://github.com/travdevops/darey.io-pbl/assets/137777644/e3fe96bb-8bbc-415f-b566-19b3131f9ca4)
+
+
+
 
 
 
