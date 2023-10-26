@@ -113,7 +113,7 @@ Repeat the same steps as for the Web Server, but instead of **apps-lv** and **lo
 
 - To install PHP and its depemdencies
 
-      - sudo yum install yum-utils http://rpms.remirepo.net/enterprise/remi-release-8.rpm
+      - sudo yum install yum-utils http://rpms.remirepo.net/enterprise/remi-release-9.rpm
       - sudo yum module list php
       - sudo yum module reset php
       - sudo yum module enable php:remi-7.4
