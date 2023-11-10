@@ -100,11 +100,11 @@ The code above uses built in `import_playbook` Ansible module.
 <img width="456" alt="common-delyml" src="https://github.com/travdevops/PBL-DevOps/assets/137777644/233f6aa3-0ef6-45a7-986b-5a9fa46fe898">
 
 
-- Update site.yml file with 
+- Update `site.yml` file with 
 
       - import_playbook: ../static-assignments/common-del.yml 
      
-- Run it against dev servers:
+- Run it against dev environment:
 
       cd /home/ubuntu/ansible-config-artifact/
       ansible-playbook -i inventory/dev.yml playbooks/site.yml
@@ -172,10 +172,10 @@ In some other cases, the `ansible.cfg` might not create automatically following 
 
 - Go into tasks directory, and within the `main.yml` file, start writing configuration tasks to do the following:
 
-      Install and configure Apache ( httpd service)
-      Clone Tooling website from GitHub https://github.com/<your-name>/tooling-git
-      Ensure the tooling website code is deployed to /var/www/html on each of 2 UAT Web servers.
-      Make sure httpd service is started
+      - Install and configure Apache ( httpd service)
+      - Clone Tooling website from GitHub https://github.com/<your-name>/tooling-git
+      - Ensure the tooling website code is deployed to /var/www/html on each of 2 UAT Web servers.
+      - Make sure httpd service is started
 
 
 Your `main.yml` may consist of following tasks:
