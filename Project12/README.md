@@ -25,3 +25,7 @@ Hence
 **NB:** In most cases, it is recommended to use `static-assignments` for playbooks, because it is more **reliable**. 
 
 With `dynamic-assignments`, it is hard to debug playbook problems due to its dynamic nature. However, you can use `dynamic-assignments` for environment specific variables as we will be introducing in this project.
+
+### Introducing Dynamic Assignment Into Our structure
+In your `https://github.com/<your-name>/ansible-config-mgt` GitHub repository start a new branch and call it `dynamic-assignments`.
+In My case here,  `https://github.com/travdevops/ansible-config-mgt`
