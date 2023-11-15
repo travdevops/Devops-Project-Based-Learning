@@ -203,5 +203,66 @@ With our experience on Ansible so far we can:
 
 <img width="723" alt="apachemainyml" src="https://github.com/travdevops/PBL-DevOps/assets/137777644/023b9d99-7d4a-46a2-b431-08dffec33d22">
 
+### Setting Up The Playbook 
+Now we can make use of `env-vars/uat.yml` file to define which loadbalancer to use in UAT environment by setting respective environmental variable to true.
+
+- We will run the playbook on the UAT Env by using both Loabalancer variables set to true on [Nginx](url) and [Apache](url)
+
+### Environment Variable for Nginx set to true:
+
+<img width="505" alt="env-vars-uatyml-nginx" src="https://github.com/travdevops/PBL-DevOps/assets/137777644/13cde71b-0b4f-4a02-bdc4-8dc4d0fd88fa">
+
+**Side note:** To make our playbook run with reduced bulkiness and less default error output messages, add some configurations to the `ansible.cfg` file
+
+    deprecation_warnings = False
+    gather_facts = smart
+These two configurations would remove the deprecation warnings and provide smart for the gathering facts play.
+
+<img width="499" alt="ans-config" src="https://github.com/travdevops/PBL-DevOps/assets/137777644/bf1e9b05-99fa-4bf1-8e82-5df0e8f2d5fc">
+
+Note: 
+- Make sure you update your `lb` and `db` servers with the inventory environment where playbook is to be run
+- Make sure ssh connection has been eastablished from the Jenkins-Ansible to the webservers (`lb` & `db`)
+
+<img width="602" alt="inv-uatyml" src="https://github.com/travdevops/PBL-DevOps/assets/137777644/62ac6ea7-caff-44ea-b2c8-267091fef096">
+
+- **Before Running the playbook**
+
+You can check if our playbook codes has any error by using the playbook run command with `--syntax-check`
+
+<img width="905" alt="playbook-syntaxcheck" src="https://github.com/travdevops/PBL-DevOps/assets/137777644/6b6dea18-def4-49ae-89bc-a811f3d2ac9f">
+
+If all is succesful with no errors. Run the playbook.
+
+### Running the Playbook with Nginx LB
+
+<img width="1382" alt="playbook1-nginx" src="https://github.com/travdevops/PBL-DevOps/assets/137777644/29dd74d0-2802-4e8a-9f62-1f7c4b8e6d6d">
+
+<img width="1368" alt="playbook2-nginx" src="https://github.com/travdevops/PBL-DevOps/assets/137777644/a6cfad81-8884-49c4-becb-d6145e89362b">
+
+
+### Environment Variable for Apache set to true:
+
+- Edit the `env-vars/uat.yml` file changing the lb to apache and set to true
+
+<img width="347" alt="env-vars-uatyml-apache" src="https://github.com/travdevops/PBL-DevOps/assets/137777644/24b707b4-adf7-4dc9-857d-b162098c5757">
+
+
+### Running the Playbook with Apache LB
+
+
+
+<img width="1050" alt="playbook-1-apache" src="https://github.com/travdevops/PBL-DevOps/assets/137777644/70764c00-33c0-451c-bb02-c337941d35c3">
+
+<img width="947" alt="playbook-2apache" src="https://github.com/travdevops/PBL-DevOps/assets/137777644/3f56e2fc-bc61-4af9-8ad2-caf23b9d0549">
+
+
+
+
+
+
+<img width="570" alt="Screenshot 2023-11-15 at 10 28 36 AM" src="https://github.com/travdevops/PBL-DevOps/assets/137777644/6d9f53f8-bec4-40da-8dcd-df9ef233ef02">
+
+
 
 
