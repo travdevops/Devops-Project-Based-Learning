@@ -1,60 +1,51 @@
-# Welcome To My GIT-PROJECT!
+# GIT-PROJECT!
+Git is a powerful and ultimate distributed version control system widely used in software development.
+- Git keeps track of the changes made to the source code.
+- Git solves the basic issues with source code sharing. 
 
-### - Git is basically the ultimate distributed version control system.
+### Initializing a New GIT Repository!
+We must have installed Git properly on the terminal.
+- open the terminal
+- create a new directory with the `mkdir` command
 
- ### - Git keeps track of the changes made to the source code. 
- 
- ### - Git solves the basic issues with source code sharing. 
+      mkdir Devops-GIT
 
-# Initializing a New GIT Repository!
+- Move into the newly created directory with the `cd` command
 
- We must have installed Git properly on the terminal.
-
-     - open the terminal
-
-    - create a new directory with the mkdir command
-
-`mkdir Devops GIT` 
-
-     - Move into the newly created directory with the cd command
-
-   `cd Devops GIT` 
-
-     - On the present working directory, run git init command to download git files to the workong directory. 
-
+      cd Devops GIT
+On the present working directory, run `git init` command to initialize git repository files to the workong directory. 
 
  <img width="987" alt="Screenshot 2023-08-20 at 9 01 05 AM" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/d4345661-e7b2-4723-a88d-2a72a4e5c29b">
 
 
- # MAKING A COMMIT!
+ ### MAKING A COMMIT!
 
  Making a commit on git could also mean the same as saving current changes to the working files. Changes could vary in forms of adding, editing, modifying or even deleting files or texts. 
 
  Lets make some changes.
+- Inside the working _Devops GIT_ directory, create a file called index.txt with the touch command
 
-    - Inside the working _Devops GIT_ directory, create a file called index.txt with the touch command
+`touch index.txt`
 
- `touch index.txt`
-
-    -  Add some text into the newly created (index.txt) file with the `echo` command
+-  Add some text into the newly created (index.txt) file with the `echo` command
 
  `echo "Addition of a new line to my index file" > index.txt`
 
-    - Add/move all the new changes to the staging phase
+- Add/move all the new changes to the staging phase
 
  `git add .`
 
-    - Commit changes to git by running the command 
+ - Commit changes to git by running the command 
 
- `git commit -m "Initial Commit"   
+ `git commit -m "Initial Commit`
  
-The -m flag is used to provide a commit message or some context about what the current and latest commit is all about and making the work descriptive. 
+The **-m** flag is used to provide a commit message or some context about what the current and latest commit is all about and making the work descriptive. 
 
 
 <img width="991" alt="Screenshot 2023-08-20 at 9 01 05 AM copy" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/1ebdebb2-c061-408f-8780-597dcf4b55bb">
 
 
-# BRANCHES IN GIT!
+### BRANCHES IN GIT!
 
 Branches in git helps to create different copies of the source code. Many changes can be made to the branches without affecting the main copy of the source code.
 
