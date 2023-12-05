@@ -30,9 +30,13 @@ commands based on conditions. Statements like *if-else* for loops, and and case 
 
 
 * Using as a loop to create a list
+
+
   <img width="643" alt="scripts-loop1" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/55e0be32-0571-40ab-8312-86196eda9c3e">
 
 * The result on the local machine is as follows.
+
+  
 <img width="360" alt="script-loop2" src="https://github.com/travdevops/darey.io-pbl/assets/137777644/2555bdc5-d560-4abe-93c1-772373a6cc52">
 
 
